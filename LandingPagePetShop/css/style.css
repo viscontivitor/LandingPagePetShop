@@ -1,0 +1,85 @@
+#pagina{
+    display:grid;
+    grid-template-columns: 100%;
+    grid-template-areas: "header" "main";
+    background: rgb(254, 255, 233)
+}
+.cabecalho{
+    grid-area:header;
+    display:flex;
+    width:100%;
+    flex-direction:row;
+    height:200px;
+}
+.arealogo{
+    height:200px;
+    width:50%;
+}
+h1{
+    background:url(../img/petshop.png) no-repeat center center;
+    display:block;
+    width:100px;
+    height:91px;
+    margin-left:30px;
+}
+.links{
+    height:200px;
+    width:40%;
+    margin-left:80px;
+}
+.links a{
+    margin-left: 70px;
+    text-decoration: none;
+    color:black;
+    text-decoration: solid;
+    
+}
+.button{
+    margin-top:20px;
+    background: rgb(27, 59, 174);
+    color: #fff;
+    border:none;
+    padding: 28px 16px;
+    border-radius: 5px;
+    margin-left: 50px;
+
+}
+.button:hover{
+    background:#ccc;
+    box-shadow: 1px 5px 50px #ccc;
+}
+.button2{
+    margin-top:20px;
+    background: rgb(27, 59, 174);
+    color: #fff;
+    border:none;
+    padding: 28px 16px;
+    border-radius: 5px;
+    margin-left: 30px;
+    margin-bottom: 10px;
+}
+.button2:hover{
+    background:#ccc;
+    box-shadow: 1px 5px 50px #ccc;
+}
+.texto{
+    font-size:xxx-large;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    margin-left:30px;
+    margin-top:-10px;
+
+}
+.subtexto{
+    font-size:x-large;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin-left: 30px;
+    margin-top: -10px;
+}
+#principal{
+    grid-area: main;
+    display:flex;
+    height:530px;
+}
+.imagem{
+    margin-left:100px;
+}
