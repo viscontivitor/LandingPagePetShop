@@ -2,7 +2,7 @@
     display:grid;
     grid-template-columns: 100%;
     grid-template-areas: "header" "main";
-    background: rgb(254, 255, 233)
+    background: rgb(254, 255, 233);
 }
 .cabecalho{
     grid-area:header;
@@ -15,6 +15,44 @@
     height:200px;
     width:50%;
 }
+#menuburguer{
+   grid-area:header;
+    display:none;
+    width:49%;
+    height:300px;
+    position: relative;
+    display: inline-block;
+}
+#menubar{
+    width:30px;
+    height:30px;
+    margin-left: 100px;
+    display:none;
+}
+ul li{
+    list-style: none;
+    padding:5px;
+}
+.menulink{
+    text-decoration: none;
+    color: black;
+}
+.dropdown-content li a:hover {
+    background-color: rgb(36, 66, 166);
+}
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: rgb(208, 176, 106);
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    color: rgb(27, 59, 174);
+    height:120px;
+  }
+.show {
+        display:block;
+    }
 h1{
     background:url(../img/petshop.png) no-repeat center center;
     display:block;
@@ -24,8 +62,22 @@ h1{
 }
 .links{
     height:200px;
-    width:40%;
+    width:50%;
     margin-left:80px;
+    display:flex;
+    flex-direction: row;
+}
+#links1{
+    margin-top:47px;
+    display:flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+#links2{
+    margin-top:47px;
+    display:flex;
+    flex-direction: row;
+    justify-content: space-around;
 }
 .links a{
     margin-left: 70px;
@@ -35,13 +87,15 @@ h1{
     
 }
 .button{
-    margin-top:20px;
+    height:50px;
+    width:80px;
     background: rgb(27, 59, 174);
     color: #fff;
     border:none;
-    padding: 28px 16px;
     border-radius: 5px;
     margin-left: 50px;
+    text-align:start;
+    margin-top:-15px;
 
 }
 .button:hover{
@@ -82,4 +136,50 @@ h1{
 }
 .imagem{
     margin-left:100px;
+}
+@media only screen and (max-width: 850px) {
+    .cabecalho{
+        display:flex;
+        flex-direction: column;
+    }
+    .links{
+        display:none;
+    }
+    #links1{
+        display:flex;
+        flex-direction: row;     
+        justify-content: space-around;
+    }
+    #links2{
+        display:flex;
+        flex-direction: row;  
+        justify-content: space-around;   
+    }
+    #menuburguer{
+        display:block;
+        position:absolute;
+        top:0px;
+        right:0px;
+    }
+    #menubar{
+        display: block;
+    }
+    #imagem{
+        width: 375px;
+        height:260px;
+        
+    }
+    .imagem{
+        margin-left: -15px;
+    }
+    #principal{
+        display:flex;
+        flex-direction: column;
+    }
+    .texto{
+        font-size: x-large;
+    }
+    .subtexto{
+        font-size: large;
+    }
 }
